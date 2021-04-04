@@ -1,0 +1,12 @@
+@import "utils/vars";
+@import "utils/fonts";
+@import "~@splidejs/splide/dist/css/splide-core.min.css";
+@import "~@splidejs/splide/dist/css/themes/splide-default.min.css";
+
+@import "utils/base";
+@import "utils/components";
+
+@import "screens/mobile";
+@import "screens/tablet";
+@import "screens/desktop";
+

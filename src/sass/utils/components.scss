@@ -1,0 +1,79 @@
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.title-sm {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.line {
+  background-color: $main-color;
+
+  &--horizontal {
+    height: 2px;
+    width: 40px;
+  }
+}
+
+.button {
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: .3s;
+  background-color: transparent;
+
+  &--default {
+    height: 50px;
+    background-color: $main-color;
+    color: #fff;
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &--white {
+    border: 1px solid $main-color;
+    color: $main-color;
+    padding: 11px 21px;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}
+
+.splide__pagination {
+  bottom: -30px;
+
+  &__page {
+    width: 10px;
+    height: 10px;
+    margin: 0 7.5px;
+    background: $gray-color;
+
+    &.is-active {
+      background-color: $main-color;
+      transform: none;
+    }
+  }
+}
+
+.input {
+  border-radius: 5px;
+  border: 1px solid $gray-color;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 12px 20px 10px;
+  width: 100%;
+
+  &::placeholder {
+    opacity: .6;
+  }
+}
