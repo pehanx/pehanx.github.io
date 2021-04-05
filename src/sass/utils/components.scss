@@ -12,6 +12,7 @@
 
 .line {
   background-color: $main-color;
+  border-radius: 15px;
 
   &--horizontal {
     height: 2px;
@@ -33,6 +34,7 @@
     height: 50px;
     background-color: $main-color;
     color: #fff;
+
     &:hover {
       opacity: .7;
     }
@@ -42,6 +44,7 @@
     border: 1px solid $main-color;
     color: $main-color;
     padding: 11px 21px;
+
     &:hover {
       background-color: $main-color;
       color: #fff;
@@ -72,8 +75,65 @@
   line-height: 26px;
   padding: 12px 20px 10px;
   width: 100%;
+  transition: .6s;
 
   &::placeholder {
     opacity: .6;
+  }
+
+  &:focus {
+    border-color: $main-color;
+  }
+}
+
+@media screen and (min-width: $tabletWidth) {
+  .title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .title-sm {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .desc {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .line {
+    &--horizontal {
+      width: 60px;
+    }
+    &--vertical{
+      width: 2px;
+      flex-shrink: 0;
+    }
+  }
+
+  .button {
+    &--default {
+      height: 60px;
+    }
+  }
+
+  .input{
+    padding: 16px 20px 14px;
+  }
+
+  .splide {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .splide.is-active .splide__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+  }
+  .splide__slide--clone {
+    display: none;
   }
 }

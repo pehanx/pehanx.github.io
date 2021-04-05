@@ -93,11 +93,12 @@
     </div>
 </header>
 
-<section class="main" style="background-image: url('dist/img/main_bg.jpg')">
-
+<!--<section class="main" style="background-image: url('dist/img/main_bg.jpg')">-->
+<section class="main">
     <div class="container">
         <div class="main__wrap">
-            <h1 class="main__text">Займ под залог недвижимости в Москве<br><span>под 8% годовых</span></h1>
+            <h1 class="main__text">Займ под залог недвижимости в Москве <span>под 8% годовых</span></h1>
+            <p class="main__description desc">Для физических, юридических лиц и ИП</p>
             <div class="main__items">
                 <div class="main__item">
                     <img class="main__item-icon" src="dist/img/main_icon_1.png" alt="">
@@ -119,10 +120,12 @@
                     <img class="main__item-icon" src="dist/img/main_icon_5.png" alt="">
                     <p>Без переоформления: используйте собственность как угодно</p>
                 </div>
+                <button class="main__button button button--default">Отправить заявку</button>
             </div>
-            <button class="button button--default">Отправить заявку</button>
+            <div class="main__tape">
+                <p class="main__tape-text">Выбаем займы физ. лицам<br>и юр. лицам</p>
+            </div>
         </div>
-
     </div>
 </section>
 
@@ -130,7 +133,7 @@
     <div class="container">
         <h1 class="advantages__title title">Преимущества займа под недвижимость</h1>
         <div class="advantages__line line line--horizontal"></div>
-        <p class="advantages__description">Получите деньги под залог недвижимости на самых выгодных условиях</p>
+        <p class="advantages__description desc">Получите деньги под залог недвижимости на самых выгодных условиях</p>
     </div>
     <div class="splide">
         <div class="splide__track">
@@ -253,28 +256,45 @@
 <section class="request">
     <div class="request__wrap">
         <div class="container">
-            <h1 class="request__title title">Заявка на получение займа</h1>
-            <div class="request__line line line--horizontal"></div>
-            <p class="request__description">100% одобрение через 20 минут, деньги в течение дня. Вы остаетесь владельцем
-                собственности и пользуетесь ею</p>
+            <div class="request__top">
+                <h1 class="request__title title">Заявка на получение займа</h1>
+                <div class="request__line line line--horizontal line--vertical"></div>
+                <p class="request__description desc">100% одобрение через 20 минут, деньги в течение дня. Вы остаетесь
+                    владельцем
+                    собственности и пользуетесь ею</p>
+            </div>
+
             <form class="request__form">
-                <input class="request__input input" type="text" name="name" placeholder="Ваше имя">
-                <input class="request__input input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
-                <input class="request__input input" type="text" name="type_property" placeholder="Тип недвижимости">
-                <input class="request__input input" type="number" name="loan_amount" placeholder="Сумма займа">
-                <button class="submit button button--default">Получить одобрение</button>
+                <div>
+                    <input class="request__input input" type="text" required name="name" placeholder="Ваше имя">
+                    <input class="request__input input" type="tel" required name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div>
+                    <input class="request__input input" type="text" name="type_property"
+                           required placeholder="Тип недвижимости">
+                    <input required class="request__input input" type="number" name="loan_amount"
+                           placeholder="Сумма займа">
+                </div>
+                <div>
+                    <button type="submit" class="request__button button button--default">Получить одобрение</button>
+                    <p class="request__form-description">Нажимая на кнопку, вы даете согласие<br>на обработку ваших
+                        персональных
+                        данных</p>
+                </div>
             </form>
-            <p class="request__form-description">Нажимая на кнопку, вы даете согласие<br>на обработку ваших персональных
-                данных</p>
+
         </div>
     </div>
 </section>
 
 <section class="faq">
     <div class="container">
-        <h1 class="faq__title title">Заявка на получение займа</h1>
-        <div class="faq__line line line--horizontal"></div>
-        <p class="faq__description">Квартира остается вашей — вы можете делать с ней, что угодно</p>
+        <div class="faq__top">
+            <h1 class="faq__title title">Ответы на популярные вопросы</h1>
+            <div class="faq__line line line--horizontal line--vertical"></div>
+            <p class="faq__description">Квартира остается вашей — вы можете делать с ней, что угодно</p>
+        </div>
+
         <div class="faq__questions">
             <div class="faq__question">
                 <div class="faq__question-top">
@@ -329,7 +349,7 @@
     <div class="container">
         <div class="footer__contacts">
             <h1 class="footer__title title">Контакты</h1>
-            <div class="footer__line line line--horizontal"></div>
+            <div class="footer__line line line--horizontal line--vertical"></div>
 
             <div class="footer__contact">
                 <p class="title-sm">Адрес:</p>
@@ -386,12 +406,9 @@
         </div>
     </div>
 
-
 </footer>
 
-
 <script src="dist/js/app.js"></script>
-
 
 </body>
 

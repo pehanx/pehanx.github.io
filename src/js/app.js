@@ -3,14 +3,17 @@ import Splide from '@splidejs/splide';
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('.splide', {
         type: 'loop',
-        perPage: 3,
+        perPage: 0,
+        drag:false,
         rewind: true,
         arrows: false,
         breakpoints: {
             768: {
+                drag:true,
                 perPage: 2,
             },
             480: {
+                drag:true,
                 perPage: 1
             }
         }

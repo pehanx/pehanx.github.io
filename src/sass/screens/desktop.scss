@@ -1,7 +1,12 @@
 @media screen and (min-width: $tabletWidth) {
+  body {
+    font-size: 16px;
+    line-height: 26px;
+  }
   .header {
     padding-top: 19px;
     padding-bottom: 19px;
+
     &__left {
       display: flex;
       align-items: center;
@@ -19,11 +24,14 @@
 
     &__menu {
       display: block;
+
       &-links {
         display: flex;
+
         li {
           font-size: 16px;
           line-height: 26px;
+
           &:not(:last-child) {
             margin-right: 30px;
           }
@@ -58,18 +66,273 @@
       }
     }
   }
-  .main{
+  .main {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    &__wrap{
+
+    &__wrap {
       background: $main-bg-color;
-      max-width: 650px;
+      max-width: 700px;
       padding: 60px 50px 90px;
+      position: relative;
     }
-    &__text{
+
+    &__tape {
+      background: $main-color;
+      padding: 11px 9px 11px 22px;
+      position: absolute;
+      border-radius: 0 5px 5px 0;
+      right: -200px;
+      top: 60px;
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 30px solid $main-dark-color;
+        border-left: 30px solid transparent;
+        left: 0;
+        position: absolute;
+        bottom: -30px;
+      }
+
+      &-text {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    &__text {
       font-size: 48px;
       line-height: 60px;
+      margin-bottom: 14px;
+    }
+
+    &__description {
+      display: block;
+    }
+
+    &__items {
+      padding: 40px 0 0;
+      display: grid;
+      grid-template-columns: 0.9fr 1fr;
+      grid-gap: 25px 33px;
+
+      .main__item {
+        margin-bottom: 0;
+
+        &:nth-child(1) {
+          order: 1;
+        }
+
+        &:nth-child(2) {
+          order: 3;
+        }
+
+        &:nth-child(3) {
+          order: 5;
+        }
+
+        &:nth-child(4) {
+          order: 2;
+        }
+
+        &:nth-child(5) {
+          order: 4;
+        }
+
+        &-icon {
+          margin-right: 17px;
+        }
+      }
+    }
+
+    &__button {
+      max-width: 246px;
+      order: 6;
+    }
+
+  }
+  .advantages {
+    padding: 120px 0 115px 0;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__line {
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      margin-bottom: 35px;
+    }
+
+    &__item {
+      padding-top: 23px;
+      padding-left: 25px;
+      padding-right: 30px;
+
+      &-icon {
+        &-container {
+          margin-right: 20px;
+        }
+      }
+
+      &-content {
+        ul {
+          padding-left: 20px;
+        }
+
+        li {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  .request {
+    padding: 90px 0;
+
+    &__wrap {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 60px 70px;
+
+      .container {
+        padding: 0;
+      }
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    &__title {
+      width: 360px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    &__description {
+      margin-bottom: 0;
+    }
+
+    &__line {
+      margin: 0 28px 0 40px;
+
+      &.line {
+        height: 60px;
+      }
+    }
+
+    &__form {
+      display: flex;
+      justify-content: space-between;
+
+      & > div:first-child {
+        width: min-content;
+        margin-right: 20px;
+      }
+
+      &-description {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &__button {
+      width: 305px;
+      margin-bottom: 28px;
+    }
+
+    &__input {
+      width: 305px;
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .faq {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    &__title {
+      width: 670px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    &__line {
+      margin: 0 28px 0 31px;
+
+      &.line {
+        height: 70px;
+      }
+    }
+
+    &__description {
+      margin-bottom: 0;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+
+    &__question {
+      &-top {
+        align-items: center;
+        padding: 15px 20px;
+      }
+
+      &-icon {
+        margin-right: 30px;
+        width: 40px;
+        height: 40px;
+
+        span {
+          &:nth-child(1) {
+            width: 20px;
+            height: 2px;
+          }
+
+          &:nth-child(2) {
+            width: 2px;
+            height: 20px;
+          }
+        }
+      }
+      &-title{
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &-content{
+        @at-root .faq__question--open #{&} {
+          height: 122px;
+        }
+        &--padding{
+          padding: 35px 100px 35px 90px;
+        }
+      }
+    }
+  }
+  .footer{
+    text-align: left;
+    &__contacts {
+      margin-bottom: 34px;
+      display: flex;
+      align-items: center;
     }
   }
 }
