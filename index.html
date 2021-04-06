@@ -69,9 +69,9 @@
 
                 <nav class="header__menu">
                     <ul class="header__menu-links">
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Заявка на получение</a></li>
-                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#advantages">Преимущества</a></li>
+                        <li><a href="#request">Заявка на получение</a></li>
+                        <li><a href="#faq">Вопросы и ответы</a></li>
                     </ul>
                 </nav>
             </div>
@@ -93,8 +93,8 @@
     </div>
 </header>
 
-<!--<section class="main" style="background-image: url('dist/img/main_bg.jpg')">-->
-<section class="main">
+<section class="main" style="background-image: url('dist/img/main_bg.jpg')">
+<!--<section class="main">-->
     <div class="container">
         <div class="main__wrap">
             <h1 class="main__text">Займ под залог недвижимости в Москве <span>под 8% годовых</span></h1>
@@ -120,7 +120,7 @@
                     <img class="main__item-icon" src="dist/img/main_icon_5.png" alt="">
                     <p>Без переоформления: используйте собственность как угодно</p>
                 </div>
-                <button class="main__button button button--default">Отправить заявку</button>
+                <a href="#request" class="main__button button button--default">Отправить заявку</a>
             </div>
             <div class="main__tape">
                 <p class="main__tape-text">Выбаем займы физ. лицам<br>и юр. лицам</p>
@@ -129,7 +129,7 @@
     </div>
 </section>
 
-<section class="advantages">
+<section id="advantages" class="advantages">
     <div class="container">
         <h1 class="advantages__title title">Преимущества займа под недвижимость</h1>
         <div class="advantages__line line line--horizontal"></div>
@@ -253,7 +253,7 @@
     </div>
 </section>
 
-<section class="request">
+<section id="request" class="request">
     <div class="request__wrap">
         <div class="container">
             <div class="request__top">
@@ -267,7 +267,8 @@
             <form class="request__form">
                 <div>
                     <input class="request__input input" type="text" required name="name" placeholder="Ваше имя">
-                    <input class="request__input input" type="tel" required name="phone" placeholder="+7 (___) ___-__-__">
+                    <input class="request__input input" type="tel" required name="phone"
+                           placeholder="+7 (___) ___-__-__">
                 </div>
                 <div>
                     <input class="request__input input" type="text" name="type_property"
@@ -287,7 +288,7 @@
     </div>
 </section>
 
-<section class="faq">
+<section id="faq" class="faq">
     <div class="container">
         <div class="faq__top">
             <h1 class="faq__title title">Ответы на популярные вопросы</h1>
@@ -345,7 +346,7 @@
     </div>
 </section>
 
-<footer class="footer">
+<footer  class="footer">
     <div class="container">
         <div class="footer__contacts">
             <h1 class="footer__title title">Контакты</h1>
@@ -371,24 +372,34 @@
 
     <div class="footer__menu">
         <div class="container">
-            <a class="footer__menu-logo" href="/">
-                <img src="dist/img/Logo_footer.png" alt="Залог недвижимости">
-            </a>
-            <p class="footer__menu-description">«Залог Недвижмости» © 2020 год</p>
+            <div class="footer__menu-logo__wrap">
+                <a class="footer__menu-logo" href="/">
+                    <img src="dist/img/Logo_footer.png" alt="Залог недвижимости">
+                </a>
+                <p class="footer__menu-description">«Залог Недвижмости» © 2020 год</p>
+            </div>
 
-            <ul class="footer__menu-links">
-                <li><a href="#">Займ под залог квартиры</a></li>
-                <li><a href="#">Займ под залог комнаты</a></li>
-                <li><a href="#">Займ под залог коммерческой недвижимости</a></li>
-                <li><a href="#">Займ под залог дома, коттеджа, таунхауса</a></li>
-                <li><a href="#">Займ под залог земельного участка</a></li>
-                <li><a href="#">Займ под залог гаража</a></li>
-                <li><a href="#">Займ под залог доли в недвижимости</a></li>
-                <li><a href="#">Рефинансирование кредита под залог недвижимости</a></li>
-            </ul>
+            <div class="footer__menu-links">
+                <div>
+                    <a class="footer__menu-link" href="#">Займ под залог квартиры</a>
+                    <a class="footer__menu-link" href="#">Займ под залог комнаты</a>
+                    <a class="footer__menu-link" href="#">Займ под залог коммерческой недвижимости</a>
+                </div>
+                <div>
+                    <a class="footer__menu-link" href="#">Займ под залог дома, коттеджа, таунхауса</a>
+                    <a class="footer__menu-link" href="#">Займ под залог земельного участка</a>
+                    <a class="footer__menu-link" href="#">Займ под залог гаража</a>
+                </div>
+                <div>
+                    <a class="footer__menu-link" href="#">Займ под залог доли в недвижимости</a>
+                    <a class="footer__menu-link" href="#">Рефинансирование кредита под залог недвижимости</a>
+                </div>
+            </div>
 
-            <a href="tel:+78003334554" class="footer__menu-phone">8 800 333 45 54</a>
-            <p class="footer__menu-phone-description">Звонок бесплатный</p>
+            <div class="footer__menu-phone__wrap">
+                <a href="tel:+78003334554" class="footer__menu-phone">8 800 333 45 54</a>
+                <p class="footer__menu-phone-description">Звонок бесплатный</p>
+            </div>
 
         </div>
     </div>

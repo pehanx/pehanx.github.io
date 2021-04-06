@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 14px;
   line-height: 22px;
@@ -77,11 +81,25 @@ body {
   }
 
   &__menu {
-    display: none;
+    position: absolute;
+    top: 73px;
+    margin: 0;
+    transition: all 0.3s linear;
+    left: -100%;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid $gray-color;
+    &--open{
+      left: 0;
+    }
 
     li {
       font-size: 16px;
       line-height: 26px;
+      a{
+        display: block;
+        padding: 8px 12px;
+      }
     }
   }
 
@@ -102,7 +120,8 @@ body {
     background: linear-gradient(#fff, $blue-light-color);
     padding: 30px 15px 60px;
   }
-  &__tape{
+
+  &__tape {
     display: none;
   }
 
@@ -136,7 +155,7 @@ body {
       margin-bottom: 20px;
     }
 
-    &:last-of-type{
+    &:last-of-type {
       margin-bottom: 30px;
     }
 
@@ -233,7 +252,7 @@ body {
     margin-bottom: 15px;
   }
 
-  &__button{
+  &__button {
     margin-bottom: 15px;
   }
 
@@ -388,14 +407,16 @@ body {
     &-links {
       margin-bottom: 25px;
 
-      li {
-        font-size: 16px;
-        line-height: 26px;
-
-        &:not(:last-child) {
-          margin-bottom: 15px;
-        }
+      & > div:last-child .footer__menu-link:last-child {
+        margin-bottom: 0;
       }
+    }
+
+    &-link {
+      display: block;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 15px;
     }
 
     &-phone {

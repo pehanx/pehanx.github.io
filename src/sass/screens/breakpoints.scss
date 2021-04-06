@@ -1,0 +1,72 @@
+@media screen and (min-width: $smDesktopWidth) {
+  .header {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    &__left {
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      margin-right: 75px;
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__menu {
+      display: block;
+      position: static;
+      border: none;
+
+      &-links {
+        display: flex;
+
+        li {
+          font-size: 16px;
+          line-height: 26px;
+
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+          a{
+            display: block;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+
+      div {
+        margin-right: 20px;
+        text-align: right;
+        flex-shrink: 0;
+      }
+    }
+
+    &__phone {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+      color: $main-color;
+
+      &-description {
+        opacity: .6;
+        margin-top: -5px;
+      }
+
+      &-icon {
+        display: none;
+      }
+    }
+  }
+}
+

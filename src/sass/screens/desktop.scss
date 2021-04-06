@@ -3,69 +3,6 @@
     font-size: 16px;
     line-height: 26px;
   }
-  .header {
-    padding-top: 19px;
-    padding-bottom: 19px;
-
-    &__left {
-      display: flex;
-      align-items: center;
-    }
-
-    &__logo {
-      display: flex;
-      align-items: center;
-      margin-right: 75px;
-    }
-
-    &__burger {
-      display: none;
-    }
-
-    &__menu {
-      display: block;
-
-      &-links {
-        display: flex;
-
-        li {
-          font-size: 16px;
-          line-height: 26px;
-
-          &:not(:last-child) {
-            margin-right: 30px;
-          }
-        }
-      }
-    }
-
-    &__right {
-      display: flex;
-      align-items: center;
-
-      div {
-        margin-right: 20px;
-        text-align: right;
-        flex-shrink: 0;
-      }
-    }
-
-    &__phone {
-      font-size: 20px;
-      line-height: 28px;
-      font-weight: 600;
-      color: $main-color;
-
-      &-description {
-        opacity: .6;
-        margin-top: -5px;
-      }
-
-      &-icon {
-        display: none;
-      }
-    }
-  }
   .main {
     background-repeat: no-repeat;
     background-size: cover;
@@ -85,6 +22,7 @@
       border-radius: 0 5px 5px 0;
       right: -200px;
       top: 60px;
+      display: block;
 
       &::after {
         content: "";
@@ -223,10 +161,7 @@
 
     &__line {
       margin: 0 28px 0 40px;
-
-      &.line {
-        height: 60px;
-      }
+      height: 60px;
     }
 
     &__form {
@@ -276,10 +211,7 @@
 
     &__line {
       margin: 0 28px 0 31px;
-
-      &.line {
-        height: 70px;
-      }
+      height: 70px;
     }
 
     &__description {
@@ -312,27 +244,115 @@
           }
         }
       }
-      &-title{
+
+      &-title {
         font-size: 18px;
         line-height: 24px;
       }
 
-      &-content{
+      &-content {
         @at-root .faq__question--open #{&} {
           height: 122px;
         }
-        &--padding{
+        &--padding {
           padding: 35px 100px 35px 90px;
         }
       }
     }
   }
-  .footer{
+  .footer {
     text-align: left;
+    padding-bottom: 28px;
+
     &__contacts {
       margin-bottom: 34px;
       display: flex;
       align-items: center;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 0;
+    }
+
+    &__line {
+      margin: 0 68px 0 92px;
+      height: 60px;
+    }
+
+    &__contact {
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 88px;
+      }
+
+      p {
+        &:first-child {
+          font-size: 16px;
+          line-height: 26px;
+        }
+
+        &:nth-child(2) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+
+      a {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &__menu {
+      padding-top: 40px;
+
+      .container {
+        display: flex;
+      }
+
+      &-logo {
+        &__wrap {
+          margin-right: 46px;
+          flex-shrink: 0;
+        }
+      }
+
+      &-description {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      &-links {
+        display: flex;
+        margin-right: 52px;
+        margin-bottom: 0;
+
+        & > div {
+          &:not(:last-child) {
+            margin-right: 21px;
+          }
+        }
+      }
+
+      &-link {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      &-phone {
+        &__wrap {
+          flex-shrink: 0;
+          text-align: right;
+        }
+      }
+    }
+
+    &__copyright {
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
     }
   }
 }
