@@ -5933,11 +5933,15 @@ document.addEventListener('DOMContentLoaded', function () {
     rewind: true,
     arrows: false,
     breakpoints: {
-      768: {
+      1080: {
+        drag: true,
+        perPage: 3
+      },
+      1020: {
         drag: true,
         perPage: 2
       },
-      480: {
+      784: {
         drag: true,
         perPage: 1
       }
@@ -5976,11 +5980,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menu_burger.classList.remove('header__burger--open');
       menu_header.classList.remove('header__menu--open');
     });
-  } //
-  // $( '.menu a' ).on("click", function(){
-  //     $('.menu').removeClass('open');
-  // });
-
+  }
 });
 
 /***/ }),

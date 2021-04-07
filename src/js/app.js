@@ -8,11 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
         rewind: true,
         arrows: false,
         breakpoints: {
-            768: {
+            1080:{
+                drag:true,
+                perPage: 3,
+            },
+            1020: {
                 drag:true,
                 perPage: 2,
             },
-            480: {
+            784: {
                 drag:true,
                 perPage: 1
             }
@@ -40,22 +44,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const menu_burger = document.querySelector(".header__burger");
     const menu_header = document.querySelector(".header__menu");
-
     menu_burger.addEventListener("click", function () {
         this.classList.toggle('header__burger--open');
         menu_header.classList.toggle('header__menu--open');
     });
 
     const menu_links = document.querySelectorAll(".header__menu a");
-
     for (let i = 0; i < menu_links.length; i++) {
         menu_links[i].addEventListener("click", function () {
             menu_burger.classList.remove('header__burger--open');
             menu_header.classList.remove('header__menu--open');
         });
     }
-    //
-    // $( '.menu a' ).on("click", function(){
-    //     $('.menu').removeClass('open');
-    // });
 });

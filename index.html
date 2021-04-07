@@ -8,14 +8,14 @@
 
     <title>Залог недвижимости</title>
 
-    <meta name="description" content="Описание">
-    <meta name="keywords" content="Ключевики">
-    <meta name="author" content="Автор">
+    <meta name="description" content="Займ под залог недвижимости в Москве под 8% годовых">
+    <meta name="keywords" content="Займ, залог, недвижимость">
+    <meta name="author" content="Никита Спехин">
     <meta name="image" content="./img/logo.png">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Название">
-    <meta property="og:description" content="Описание">
+    <meta property="og:title" content="Залог недвижимости">
+    <meta property="og:description" content="Займ под залог недвижимости в Москве под 8% годовых">
     <meta property="og:image" content="./img/logo.png">
     <meta property="og:url" content="https://example.com">
 
@@ -44,7 +44,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="apple-mobile-web-app-title" content="Название">
+    <meta name="apple-mobile-web-app-title" content="Залог недвижимости">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <meta name="format-detection" content="telephone=no">
@@ -94,7 +94,6 @@
 </header>
 
 <section class="main" style="background-image: url('dist/img/main_bg.jpg')">
-<!--<section class="main">-->
     <div class="container">
         <div class="main__wrap">
             <h1 class="main__text">Займ под залог недвижимости в Москве <span>под 8% годовых</span></h1>
@@ -123,7 +122,7 @@
                 <a href="#request" class="main__button button button--default">Отправить заявку</a>
             </div>
             <div class="main__tape">
-                <p class="main__tape-text">Выбаем займы физ. лицам<br>и юр. лицам</p>
+                <p class="main__tape-text">Выдаем займы физ. лицам<br>и юр. лицам</p>
             </div>
         </div>
     </div>
@@ -265,18 +264,20 @@
             </div>
 
             <form class="request__form">
-                <div>
-                    <input class="request__input input" type="text" required name="name" placeholder="Ваше имя">
-                    <input class="request__input input" type="tel" required name="phone"
-                           placeholder="+7 (___) ___-__-__">
+                <div class="request__inputs">
+                    <div>
+                        <input class="request__input input" type="text" required name="name" placeholder="Ваше имя">
+                        <input class="request__input input" type="tel" required name="phone"
+                               placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div>
+                        <input class="request__input input" type="text" name="type_property"
+                               required placeholder="Тип недвижимости">
+                        <input required class="request__input input" type="number" name="loan_amount"
+                               placeholder="Сумма займа">
+                    </div>
                 </div>
-                <div>
-                    <input class="request__input input" type="text" name="type_property"
-                           required placeholder="Тип недвижимости">
-                    <input required class="request__input input" type="number" name="loan_amount"
-                           placeholder="Сумма займа">
-                </div>
-                <div>
+                <div class="request__button__wrap">
                     <button type="submit" class="request__button button button--default">Получить одобрение</button>
                     <p class="request__form-description">Нажимая на кнопку, вы даете согласие<br>на обработку ваших
                         персональных
@@ -346,7 +347,7 @@
     </div>
 </section>
 
-<footer  class="footer">
+<footer class="footer">
     <div class="container">
         <div class="footer__contacts">
             <h1 class="footer__title title">Контакты</h1>

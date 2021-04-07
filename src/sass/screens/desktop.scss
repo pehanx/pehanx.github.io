@@ -1,45 +1,49 @@
 @media screen and (min-width: $tabletWidth) {
-  body {
-    font-size: 16px;
-    line-height: 26px;
+
+  .header {
+    &__burger {
+      display: none;
+    }
+    &__logo {
+      display: flex;
+      align-items: center;
+      margin-right: 75px;
+    }
+    &__menu {
+      display: block;
+      position: static;
+      border: none;
+
+      &-links {
+        display: flex;
+
+        li {
+          font-size: 16px;
+          line-height: 26px;
+
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+          a{
+            display: block;
+            padding: 0;
+          }
+        }
+      }
+    }
   }
+
   .main {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
 
     &__wrap {
+      margin: 0 auto;
       background: $main-bg-color;
       max-width: 700px;
       padding: 60px 50px 90px;
       position: relative;
-    }
-
-    &__tape {
-      background: $main-color;
-      padding: 11px 9px 11px 22px;
-      position: absolute;
-      border-radius: 0 5px 5px 0;
-      right: -200px;
-      top: 60px;
-      display: block;
-
-      &::after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: 30px solid $main-dark-color;
-        border-left: 30px solid transparent;
-        left: 0;
-        position: absolute;
-        bottom: -30px;
-      }
-
-      &-text {
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-      }
     }
 
     &__text {
@@ -52,45 +56,6 @@
       display: block;
     }
 
-    &__items {
-      padding: 40px 0 0;
-      display: grid;
-      grid-template-columns: 0.9fr 1fr;
-      grid-gap: 25px 33px;
-
-      .main__item {
-        margin-bottom: 0;
-
-        &:nth-child(1) {
-          order: 1;
-        }
-
-        &:nth-child(2) {
-          order: 3;
-        }
-
-        &:nth-child(3) {
-          order: 5;
-        }
-
-        &:nth-child(4) {
-          order: 2;
-        }
-
-        &:nth-child(5) {
-          order: 4;
-        }
-
-        &-icon {
-          margin-right: 17px;
-        }
-      }
-    }
-
-    &__button {
-      max-width: 246px;
-      order: 6;
-    }
 
   }
   .advantages {
@@ -136,42 +101,19 @@
     &__wrap {
       max-width: 1170px;
       margin: 0 auto;
-      padding: 60px 70px;
+      padding: 60px 70px 40px 70px;
 
       .container {
         padding: 0;
       }
     }
 
-    &__top {
-      display: flex;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-
-    &__title {
-      width: 360px;
-      flex-shrink: 0;
-      margin-bottom: 0;
-    }
-
-    &__description {
-      margin-bottom: 0;
-    }
-
-    &__line {
-      margin: 0 28px 0 40px;
-      height: 60px;
-    }
-
     &__form {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
 
-      & > div:first-child {
-        width: min-content;
-        margin-right: 20px;
-      }
+
 
       &-description {
         font-size: 14px;
@@ -184,42 +126,11 @@
       margin-bottom: 28px;
     }
 
-    &__input {
-      width: 305px;
-      margin-bottom: 0;
 
-      &:first-child {
-        margin-bottom: 20px;
-      }
-    }
   }
   .faq {
     padding-top: 120px;
     padding-bottom: 120px;
-
-    &__top {
-      display: flex;
-      align-items: center;
-      margin-bottom: 70px;
-    }
-
-    &__title {
-      width: 670px;
-      flex-shrink: 0;
-      margin-bottom: 0;
-    }
-
-    &__line {
-      margin: 0 28px 0 31px;
-      height: 70px;
-    }
-
-    &__description {
-      margin-bottom: 0;
-      font-size: 24px;
-      line-height: 32px;
-      font-weight: 600;
-    }
 
     &__question {
       &-top {
@@ -261,93 +172,9 @@
     }
   }
   .footer {
-    text-align: left;
-    padding-bottom: 28px;
 
-    &__contacts {
-      margin-bottom: 34px;
-      display: flex;
-      align-items: center;
-    }
 
-    &__title {
-      font-size: 24px;
-      line-height: 32px;
-      margin-bottom: 0;
-    }
 
-    &__line {
-      margin: 0 68px 0 92px;
-      height: 60px;
-    }
-
-    &__contact {
-      &:not(:last-child) {
-        margin-bottom: 0;
-        margin-right: 88px;
-      }
-
-      p {
-        &:first-child {
-          font-size: 16px;
-          line-height: 26px;
-        }
-
-        &:nth-child(2) {
-          font-size: 14px;
-          line-height: 22px;
-        }
-      }
-
-      a {
-        font-size: 14px;
-        line-height: 22px;
-      }
-    }
-
-    &__menu {
-      padding-top: 40px;
-
-      .container {
-        display: flex;
-      }
-
-      &-logo {
-        &__wrap {
-          margin-right: 46px;
-          flex-shrink: 0;
-        }
-      }
-
-      &-description {
-        font-size: 14px;
-        line-height: 22px;
-      }
-
-      &-links {
-        display: flex;
-        margin-right: 52px;
-        margin-bottom: 0;
-
-        & > div {
-          &:not(:last-child) {
-            margin-right: 21px;
-          }
-        }
-      }
-
-      &-link {
-        font-size: 14px;
-        line-height: 24px;
-      }
-
-      &-phone {
-        &__wrap {
-          flex-shrink: 0;
-          text-align: right;
-        }
-      }
-    }
 
     &__copyright {
       text-align: center;

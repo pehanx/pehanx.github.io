@@ -13,14 +13,8 @@ body {
   border-bottom: 1px solid $gray-color;
 
   &__wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -89,14 +83,16 @@ body {
     background: #fff;
     width: 100%;
     border-bottom: 1px solid $gray-color;
-    &--open{
+
+    &--open {
       left: 0;
     }
 
     li {
       font-size: 16px;
       line-height: 26px;
-      a{
+
+      a {
         display: block;
         padding: 8px 12px;
       }
@@ -105,6 +101,14 @@ body {
 
   &__right {
     display: none;
+  }
+
+  &__phone {
+
+    &-icon {
+      display: flex;
+      align-items: center;
+    }
   }
 
 }
@@ -144,11 +148,7 @@ body {
   }
 
   &__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 
     &:not(:last-of-type) {
@@ -187,7 +187,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 3px 20px $shadow-color;
     padding: 15px 20px 20px 15px;
-    height: 270px;
+    height: 88%;
 
     &-top {
       display: flex;
@@ -252,9 +252,15 @@ body {
     margin-bottom: 15px;
   }
 
+
   &__button {
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
+
+    &__wrap {
+      margin: 0 auto;
+    }
   }
+
 
   &__form {
 

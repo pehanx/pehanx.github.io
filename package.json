@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@splidejs/splide": "^2.4.21",
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.2.5",
     "laravel-mix": "^6.0.16"
   },
   "devDependencies": {

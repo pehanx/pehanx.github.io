@@ -1,0 +1,37 @@
+@media screen and (min-width: $phoneWidth) {
+  body {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .header {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    &__left {
+      display: flex;
+      align-items: center;
+    }
+    &__menu{
+      top: 81px;
+    }
+
+
+    &__phone {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+      color: $main-color;
+
+      &-description {
+        opacity: .6;
+        margin-top: -5px;
+      }
+
+    }
+  }
+  .main{
+    &__button{
+      margin: 0 auto;
+    }
+  }
+}
